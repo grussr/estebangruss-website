@@ -1,0 +1,21 @@
+---
+title: "Esteban's home page"
+layout: default
+---
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { 
+    updateSecondsDisplay();
+  });
+  
+  var startDate = new Date("6/13/2017");
+  
+  function updateSecondsDisplay() {
+    $("#secondsSpan").text(Math.round((new Date() - startDate) / 1000));
+    setTimeout(updateSecondsDisplay, 500);
+  }
+</script>
+  As of now, Esteban is <span id="secondsSpan"></span> seconds old.
+</body>
